@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "location": {
-            "value": "westindia"
+            "value": "Central US"
         },
         "networkInterfaceName": {
             "value": "groupa-vm968"
@@ -14,7 +14,7 @@
         "networkSecurityGroupRules": {
             "value": [
                 {
-                    "name": "http",
+                    "name": "http_8080",
                     "properties": {
                         "priority": 1010,
                         "protocol": "TCP",
@@ -26,6 +26,20 @@
                         "sourcePortRange": "*",
                         "destinationAddressPrefix": "*",
                         "destinationPortRange": "8080"
+                    }
+                    {
+                    "name": "http_80",
+                    "properties": {
+                        "priority": 1030,
+                        "protocol": "TCP",
+                        "access": "Allow",
+                        "direction": "Inbound",
+                        "sourceApplicationSecurityGroups": [],
+                        "destinationApplicationSecurityGroups": [],
+                        "sourceAddressPrefix": "*",
+                        "sourcePortRange": "*",
+                        "destinationAddressPrefix": "*",
+                        "destinationPortRange": "80"
                     }
                 },
                 {
