@@ -28,6 +28,9 @@
         "networkSecurityGroupRules": {
             "type": "array"
         },
+          "addressPrefixes": {
+            "type": "array"
+        },
         "authenticationType": {
             "type": "string",
             "defaultValue": "password",
