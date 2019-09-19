@@ -27,20 +27,7 @@
                         "destinationAddressPrefix": "*",
                         "destinationPortRange": "8080"
                     }
-                    {
-                    "name": "http_80",
-                    "properties": {
-                        "priority": 1030,
-                        "protocol": "TCP",
-                        "access": "Allow",
-                        "direction": "Inbound",
-                        "sourceApplicationSecurityGroups": [],
-                        "destinationApplicationSecurityGroups": [],
-                        "sourceAddressPrefix": "*",
-                        "sourcePortRange": "*",
-                        "destinationAddressPrefix": "*",
-                        "destinationPortRange": "80"
-                    }
+
                 },
                 {
                     "name": "default-allow-ssh",
@@ -93,7 +80,7 @@
             "value": "GroupA-VM"
         },
         "virtualMachineRG": {
-            "value": "RG-Swapna"
+            "value": "RG-Ram"
         },
         "osDiskType": {
             "value": "Standard_LRS"
