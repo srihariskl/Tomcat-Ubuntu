@@ -15,7 +15,7 @@
       "value": "password"
     },
     "networkSecurityGroupName": {
-      "value": "GroupA-VM-nsg"
+      "value": "GroupAnewnsg"
   },
   "networkSecurityGroupRules": {
       "value": [
