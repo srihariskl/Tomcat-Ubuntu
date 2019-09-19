@@ -28,9 +28,6 @@
         "networkSecurityGroupRules": {
             "type": "array"
         },
-          "addressPrefixes": {
-            "type": "array"
-        },
         "authenticationType": {
             "type": "string",
             "defaultValue": "password",
@@ -100,7 +97,7 @@
         "addressPrefixes": {
             "type": "array",
             "defaultValue": [
-                "10.0.0.0/16"
+                "10.0.0.0/24"
             ],
             "metadata": {
                 "description": "Address prefix of the virtual network"
