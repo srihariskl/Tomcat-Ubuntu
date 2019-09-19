@@ -1,0 +1,109 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "Central US"
+    },
+     "vmName": {
+      "value": "linux-vm"
+    },
+    "adminUsername": {
+      "value": "toor"
+    },
+    "authenticationType": {
+      "value": "password"
+    },
+    "networkSecurityGroupName": {
+      "value": "GroupA-VM-nsg"
+  },
+  "networkSecurityGroupRules": {
+      "value": [
+          {
+              "name": "http_8080",
+              "properties": {
+                  "priority": 1010,
+                  "protocol": "TCP",
+                  "access": "Allow",
+                  "direction": "Inbound",
+                  "sourceApplicationSecurityGroups": [],
+                  "destinationApplicationSecurityGroups": [],
+                  "sourceAddressPrefix": "*",
+                  "sourcePortRange": "*",
+                  "destinationAddressPrefix": "*",
+                  "destinationPortRange": "8080"
+              }
+
+          },
+          {
+              "name": "default-allow-ssh",
+              "properties": {
+                  "priority": 1020,
+                  "protocol": "TCP",
+                  "access": "Allow",
+                  "direction": "Inbound",
+                  "sourceApplicationSecurityGroups": [],
+                  "destinationApplicationSecurityGroups": [],
+                  "sourceAddressPrefix": "*",
+                  "sourcePortRange": "*",
+                  "destinationAddressPrefix": "*",
+                  "destinationPortRange": "22"
+              }
+          }
+      ]
+  },
+    "adminPasswordOrKey": {
+      "value": "Password@123"
+    },
+    "vmSize": {
+      "value": "Standard_A2_v2"
+    },
+    "storageNewOrExisting": {
+      "value": "new"
+    },
+    "storageAccountName": {
+      "value": "groupastorage"
+    },
+    "storageAccountType": {
+      "value": "Standard_LRS"
+    },
+    "storageAccountResourceGroupName": {
+      "value": "RG-Ram"
+    },
+    "virtualNetworkNewOrExisting": {
+      "value": "Existing"
+    },
+    "virtualNetworkName": {
+      "value": "VNET-POC"
+    },
+    "addressPrefixes": {
+      "value": [
+        "10.0.0.0/24"
+      ]
+    },
+    "subnetName": {
+      "value": "Subnet-POC"
+    },
+    "subnetPrefix": {
+      "value": "10.0.0.0/24"
+    },
+    "virtualNetworkResourceGroupName": {
+      "value": "RG-Ram"
+    },
+    "publicIpNewOrExisting": {
+      "value": "new"
+    },
+    "publicnsgNewOrExisting": {
+      "value": "new"
+    },
+    "publicIpName": {
+      "value": "groupapublicip"
+    },
+    "publicIpDns": {
+      "value": "groupapbdns"
+    },
+    "publicIpResourceGroupName": {
+      "value": "RG-Ram"
+    }
+  }
+}
