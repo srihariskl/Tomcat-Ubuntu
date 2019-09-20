@@ -77,7 +77,7 @@
             "value": "Basic"
         },
         "virtualMachineName": {
-            "value": "GroupA-VM1"
+            "value": "GroupA-VM2"
         },
         "virtualMachineRG": {
             "value": "RG-Swapna"
