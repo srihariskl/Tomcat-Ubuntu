@@ -77,10 +77,10 @@
             "value": "Basic"
         },
         "virtualMachineName": {
-            "value": "GroupA-VM"
+            "value": "GroupA-VM1"
         },
         "virtualMachineRG": {
-            "value": "RG-Ram"
+            "value": "RG-Swapna"
         },
         "osDiskType": {
             "value": "Standard_LRS"
